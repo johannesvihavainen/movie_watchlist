@@ -31,13 +31,16 @@ nav {
 .nav-content p {
     margin: 0;
 }
+
 .search-field {
     display: flex;
     position: absolute;
     top: 18vh;
-    left: 50%;           /* start from horizontal center */
+    left: 50%;
+    /* start from horizontal center */
     transform: translateX(-50%);
 }
+
 #search-movie-input {
     padding-inline: 0.5em;
     width: 70vw;
@@ -47,6 +50,7 @@ nav {
     border-bottom-left-radius: 3px;
     background-color: #fbfbfb;
 }
+
 .search-field button {
     border: 1px solid rgb(102, 102, 102);
     border-left: none;
@@ -54,4 +58,97 @@ nav {
     width: 20%;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
+}
+
+.cover-image {
+    width: 150px;
+    height: auto;
+    border-radius: 4px;
+    margin-right: 1rem;
+    object-fit: cover;
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.movie-container {
+    display: flex;
+    flex-direction: row;
+    background-color: hsl(0, 0%, 74%);
+    padding: 1rem;
+    margin: 1rem auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 90vw;
+    margin-top: 3rem;
+}
+
+.title-and-reviews-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.title-and-reviews-wrapper, .length-kind-and-watchlist {
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.length-kind-and-watchlist {
+    display: flex;
+    gap: 1em;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.add-to-watchlist-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgb(210, 210, 210);
+    border-radius: 5px;
+    padding: 0.3rem;
+}
+
+.add-to-watchlist-wrapper svg {
+    width: 20px;
+    height: 20px;
+    stroke: #585858;
+}
+.add-to-watchlist-wrapper button {
+    padding: 0.25rem 0.5rem;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.ratings {
+    font-size: 1rem;
+    color: #f5b50a;
+    margin: 0;
+}
+.length, .genre {
+    font-size: 0.9rem;
+    color: hsl(0, 0%, 15%);
+}
+.description {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.3;
 }
