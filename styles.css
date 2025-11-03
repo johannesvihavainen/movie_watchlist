@@ -1,0 +1,57 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ebebeb;
+}
+
+nav {
+    background-image: url('assets/cyberpunk.jpg');
+    background-size: cover;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #fff;
+}
+
+.nav-content h1,
+.nav-content p {
+    margin: 0;
+}
+.search-field {
+    display: flex;
+    position: absolute;
+    top: 18vh;
+    left: 50%;           /* start from horizontal center */
+    transform: translateX(-50%);
+}
+#search-movie-input {
+    padding-inline: 0.5em;
+    width: 70vw;
+    height: 4vh;
+    border: 1px solid rgb(102, 102, 102);
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    background-color: #fbfbfb;
+}
+.search-field button {
+    border: 1px solid rgb(102, 102, 102);
+    border-left: none;
+    cursor: pointer;
+    width: 20%;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
