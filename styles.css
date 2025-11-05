@@ -41,7 +41,7 @@ nav {
     transform: translateX(-50%);
 }
 
-#search-movie-input {
+.search-movie-input {
     padding-inline: 0.5em;
     width: 70vw;
     height: 4vh;
@@ -165,4 +165,31 @@ a {
 }
 .go-back-link {
     color: #000;
+}
+.toggle-bg {
+    width: 20vw;
+    align-self: flex-start;
+    margin-left: 2.7em;
+    border-radius: 2px;
+    padding: 0.5em;
+    border: 1px solid rgb(102, 102, 102);
+}
+.dark-bg {
+    background-color: #272727;
+}
+.dark-button {
+    background-color: #676767;
+    color: #fff;
+}
+.dark-input {
+    background-color: #3e3e3e;
+    color: #fff;
+}
+.dark-input::placeholder {
+    color: #fff;
+}
+.dark-button-2 {
+    background-color: #676767;
+    color: #fff;
+    border: 1px solid rgb(102, 102, 102);
 }

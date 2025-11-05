@@ -1,6 +1,15 @@
-const searchMovieInput = document.getElementById('search-movie-input')
+const searchMovieInput = document.querySelector('.search-movie-input')
 const searchButton = document.getElementById('search-button')
 const movies = document.getElementById('movies')
+const toggleBackgroundBtn = document.querySelector('.toggle-bg')
+
+toggleBackgroundBtn.addEventListener('click', function() {
+    document.body.classList.toggle('dark-bg')
+    document.documentElement.classList.toggle('dark-bg')
+    searchButton.classList.toggle('dark-button')
+    searchMovieInput.classList.toggle('dark-input')
+    toggleBackgroundBtn.classList.toggle('dark-button-2')
+})
 
 searchButton.addEventListener('click', getData)
 async function getData() {

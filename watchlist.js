@@ -1,5 +1,13 @@
 const watchlistContainer = document.getElementById('watchlist')
 
+const toggleBackgroundBtn = document.querySelector('.toggle-bg')
+
+toggleBackgroundBtn.addEventListener('click', function() {
+    document.body.classList.toggle('dark-bg')
+    document.documentElement.classList.toggle('dark-bg')
+    toggleBackgroundBtn.classList.toggle('dark-button-2')
+})
+
 function displayWatchlist() {
     const watchlist = JSON.parse(localStorage.getItem('watchlist')) || []
 
