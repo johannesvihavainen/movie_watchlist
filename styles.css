@@ -152,3 +152,17 @@ nav {
     color: #444;
     line-height: 1.3;
 }
+a {
+    color: #fff;
+    text-decoration: none;
+}
+.empty-watchlist {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+}
+.go-back-link {
+    color: #000;
+}

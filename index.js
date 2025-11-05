@@ -86,6 +86,27 @@ async function getData() {
             addToWatchlistWrapper.appendChild(addToWatchlistBtn)
             lengthKindAndWatchlist.appendChild(addToWatchlistWrapper)
 
+            addToWatchlistBtn.addEventListener('click', function () {
+                let watchlist = JSON.parse(localStorage.getItem('watchlist')) || []
+
+                if (!watchlist.some(movie => movie.imdbID === result.imdbID)) {
+                    watchlist.push({
+                        imdbID: result.imdbID,
+                        title: result.Title,
+                        poster: result.Poster,
+                        runtime: result.Runtime,
+                        genre: result.Genre,
+                        rating: result.Ratings[0]?.Value,
+                        plot: result.Plot
+                    })
+
+                    localStorage.setItem('watchlist', JSON.stringify(watchlist))
+                    alert(`${result.Title} added to watchlist!`)
+                } else {
+                    alert(`${result.Title} is already in your watchlist.`)
+                }
+            })
+
             const description = document.createElement('p')
             description.classList.add('description')
             description.textContent = result.Plot
